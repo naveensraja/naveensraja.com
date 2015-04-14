@@ -139,7 +139,7 @@
 
      <!-- Travelsafe -->
     <span id="travelsafe"></span>
-    <section class="cd-single-item">
+    <section class="cd-single-item cd-slider-active">
         <div class="cd-slider-wrapper">
             <ul class="cd-slider">
                 <li class="selected"><img src="img/travelsafe/1.jpg" alt="Project 1"></li>
@@ -408,7 +408,7 @@
         <script>
             $(document).ready(function() {
                 var interests = ["time travel", "vintage BMWs", "puppies", "rock climbing", "where DB Cooper is", "movies", "food", "beer", "work history", "traveling", "coding"];
-                var curr = 1;
+    
                 console.log(interests.length);
 
                 $(".interest").html(interests[0] + "?")
@@ -416,11 +416,11 @@
                 function cycle() {
                     $(".interest").fadeTo(100, 0);
                     setTimeout(function() {
+                        var curr = Math.floor(Math.random() *(interests.length));
                         $(".interest").html(interests[curr] + "?");
                         $(".interest").fadeTo(100, 1);
 
-                        curr = (curr+1)%interests.length;
-                        setTimeout(cycle, 2500);
+                        setTimeout(cycle, 1500);
                     }, 800);
                 }
                 setTimeout(function() {
