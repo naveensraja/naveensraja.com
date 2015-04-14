@@ -131,7 +131,7 @@
         <div class="container text-center">
             <h4 class="header-text">A little about me...</h4>
             <p>
-              As a current senior, I have studied at the University of Illinois Urbana-Champaign toward a degree in industrial design. I have had a lot of ups and arguably just as many downs but the one thing I have learned is my desire to create something remarkable is ever growing. To me being a designer means interdisciplinary thinking, being and doing. Good design makes the user feel amazed but completely comfortable at the same time. This ideology fuels some of my favorite projects.
+              <br>To me being a designer means interdisciplinary <strong>thinking, being and doing.</strong> This ideology fuels some of my favorite projects. As a current senior, I have studied at the University of Illinois Urbana-Champaign toward a degree in industrial design. I have had a lot of ups and arguably just as many downs but the one thing I have learned is my desire to create something remarkable is ever growing. 
             </p>
             </div>
         </div>
@@ -192,7 +192,7 @@
     </section> <!-- cd-single-item -->
     <!--END Travelsafe-->
 
-    <span id="samples2"></span>
+    <!-- <span id="samples2"></span>
     <div class="section section-presentation">
         <div class="container">
             <div class="row">
@@ -279,14 +279,14 @@
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="section section-testimonial">
+    </div> -->
+   
+   <!-- <div class="section section-testimonial">
         <div class="container">
                 <h4 class="header-text text-center">What people think</h4>
                 <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
                   <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
+                   <!-- <div class="carousel-inner" role="listbox">
                         <div class="item">
                             <div class="mask">
                                 <img src="img/faces/face-4.jpg">
@@ -326,14 +326,14 @@
                 </div>
         
         </div>
-    </div>
+    </div> -->
 
        <div class="section section-no-padding">
         <div class="full-background filter-gradient orange" style="background-image:url('img/landing-page-1/bg.jpg')">
             <div class="info">
-                <h1>Download this landing page for free!</h1>
-                <p>Beautiful multipurpose bootstrap landing page.</p> 
-                <a href="http://www.creative-tim.com/product/awesome-landing-page" class="btn btn-neutral btn-lg">DOWNLOAD</a>
+                <h1>Drop me a line</h1>
+                <p>Want to chat about design or <span class="interest"></span> Click the button below to reach me via email.</p> 
+                <a href="mailto:hi@naveensraja.com" class="btn btn-neutral btn-lg">hi@naveensraja.com</a>
             </div>
         </div>
     </div> 
@@ -365,7 +365,7 @@
                     </ul>
                 </nav>
                 <div class="copyright">
-                    &copy; 2015 Naveen Raja</a>, made with gallons of coffee 
+                    &copy; 2015 Naveen Raja</a>, Made with love &amp coffee.
                 </div>
             </div>
         </footer>
@@ -403,6 +403,35 @@
             big_image.css('top',oVal);
         };
     </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+        </script>
+        <script>
+            $(document).ready(function() {
+                var interests = ["time travel", "vintage BMWs", "puppies", "rock climbing", "where DB Cooper is", "movies", "food", "beer", "work history", "traveling", "coding"];
+                var curr = 1;
+                console.log(interests.length);
+
+                $(".interest").html(interests[0] + "?")
+                
+                function cycle() {
+                    $(".interest").fadeTo(100, 0);
+                    setTimeout(function() {
+                        $(".interest").html(interests[curr] + "?");
+                        $(".interest").fadeTo(100, 1);
+
+                        curr = (curr+1)%interests.length;
+                        setTimeout(cycle, 2500);
+                    }, 800);
+                }
+                setTimeout(function() {
+                    $(".container").fadeTo(1500, 1);
+                    setTimeout(function() {
+                        $(".bio").fadeTo(2000, .8);
+                        setTimeout(cycle, 2800);
+                    }, 1200);
+                }, 100);
+            });
+        </script>
 
 </html>
 
