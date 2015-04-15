@@ -53,8 +53,6 @@ ul {
  list-style: none;
 }
 
-
-
 /* Button */
 
 input[type="submit"],
@@ -466,7 +464,7 @@ a:focus, a:active {
 }
 
 .section {
-  padding: 0px 0;
+  padding: 0 0;
   position: relative;
   background-color: #FFFFFF;
 }
@@ -1548,8 +1546,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
 .cd-slider {
   position: relative;
   z-index: 1;
-  overflow: hidden;
-  padding-left: 0 }
+  overflow: hidden; 
+  padding-left: 0; 
+  margin-bottom: 0; }
   .cd-slider::before {
     /* never visible - this is used in jQuery to check the current MQ */
     content: 'mobile';
@@ -1617,7 +1616,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
           display: none; } }
 
 @media only screen and (min-width: 1024px) {
-  .cd-slider-navigation {margin: 0;}
+  .cd-slider-navigation { margin: 0; }
   .cd-slider-navigation li, .cd-slider-pagination {
     opacity: 0;
     visibility: hidden;
@@ -1744,7 +1743,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
     transform: scale(1.2); }
-  /* This is you turn on and off the "X" */
   @media only screen and (min-width: 1024px) {
     .cd-slider-wrapper .cd-close {
       display: none; } }
