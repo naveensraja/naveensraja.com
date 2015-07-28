@@ -630,7 +630,8 @@ a:focus, a:active {
   padding: 10px 15px;
   margin: 15px 3px;
   line-height: 20px;
-  text-align: center;
+  text-align: left;
+  opacity: .4;
 }
 .footer hr {
   border-color: #dddddd;
@@ -762,10 +763,11 @@ a:focus, a:active {
 
 
 .landing-page p{
-  margin-top: 30px;
+  margin-top: 10px;
   line-height: 28px;
   font-size: 18px;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 .landing-page .section-description h5 {
   margin-top: 40px;
@@ -788,7 +790,7 @@ a:focus, a:active {
   left: auto;
 }
 .landing-page .section-clients {
-  padding: 50px 0;
+  padding: 0;
 }
 .landing-page .section-clients .info .icon {
   background: transparent;
@@ -905,7 +907,6 @@ a:focus, a:active {
       text-transform: uppercase;
       font-weight: 700;
       color: #333;
-      margin-bottom: 20px;
       font-size: 22px;
       position: relative;
       line-height: 24px;
@@ -1645,8 +1646,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     right: 10px; }
   .cd-slider-navigation li a {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 27px;
+    height: 27px;
     background: url("../img/cd-icon-arrow.svg") no-repeat center center;
     -webkit-transition: opacity 0.2s 0s, visibility 0s 0s;
     -moz-transition: opacity 0.2s 0s, visibility 0s 0s;
@@ -1671,9 +1672,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     transform: rotate(180deg); }
   @media only screen and (min-width: 1024px) {
     .cd-slider-navigation li:first-child {
-      left: 30px; }
+      left: 2px; }
     .cd-slider-navigation li:last-child {
-      right: 30px; } }
+      right: 2px; } }
 
 .cd-slider-pagination {
   /* you won't see this element in the html but it will be created using jQuery */
@@ -1701,7 +1702,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     .cd-slider-pagination li.selected a {
       background: #f5f4f3; }
   .cd-slider-pagination a {
-    display: block;
+    display: none;
     height: 12px;
     width: 12px;
     border-radius: 50%;
